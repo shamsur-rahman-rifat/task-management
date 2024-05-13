@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management App</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Task Management App</h1>
+        <div class="input-container">
+            <div class="input-group">
+                <label for="projectName">Project Name:</label>
+                <input type="text" id="projectName">
+            </div>
+            <div class="input-group">
+                <label for="task">Task:</label>
+                <input type="text" id="task">
+            </div>
+            <div class="input-group">
+                <label for="priority">Priority:</label>
+                <select id="priority">
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="condition">Condition:</label>
+                <select id="condition">
+                    <option value="Finished">Finished</option>
+                    <option value="Pending">Pending</option>
+                    <option value="On Hold">On Hold</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="responsiblePerson">Responsible Person:</label>
+                <input type="text" id="responsiblePerson">
+            </div>
+            <div class="input-group">
+                <label for="dueDate">Due Date:</label>
+                <input type="date" id="dueDate">
+            </div>
+            <button onclick="addTask()">Add Task</button>
+            <button onclick="removeTask()">Remove Task</button>
+        </div>
+        <table id="taskTable">
+            <thead>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Task</th>
+                    <th>Priority</th>
+                    <th>Condition</th>
+                    <th>Responsible Person</th>
+                    <th>Due Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Task items will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+    
+    
+
+    <script src="/script.js"></script>
+</body>
+</html>
